@@ -90,7 +90,22 @@ class Caja {
 }
 
 class RegistroRetiro {
-    
+    private String usuario;
+    private String caja;
+    private double monto;
+    private Date fecha;
+
+    public RegistroRetiro(String usuario, String caja, double monto) {
+        this.usuario = usuario;
+        this.caja = caja;
+        this.monto = monto;
+        this.fecha = new Date();
+    }
+
+    @Override
+    public String toString() {
+        return "[" + fecha + "] Usuario: " + usuario + ", Caja: " + caja + ", Monto retirado: $" + monto;
+    }
 }
 
 class RegistroReposicion {
